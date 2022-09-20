@@ -6,11 +6,14 @@ export const Router: VFC = memo(() => {
   return (
     <>
       <Routes>
-        {Links.map((item) => {
-          return (
-            <Route key={item.path} path={item.path} element={item.element} />
-          );
-        })}
+        <Route path={Links[0].path} element={Links[0].element} />
+        <Route path="/home">
+          {Links.map((item) => {
+            return (
+              <Route key={item.path} path={item.path} element={item.element} />
+            );
+          })}
+        </Route>
       </Routes>
     </>
   );
