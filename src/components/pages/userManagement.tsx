@@ -1,5 +1,5 @@
 import { VFC, memo } from "react";
 
-export const userManagement: VFC = memo(() => {
+export const UserManagement: VFC = memo(() => {
   return <p>userManagement</p>;
 });
