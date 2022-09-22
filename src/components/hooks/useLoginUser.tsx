@@ -2,7 +2,7 @@ import { useContext } from "react";
 import {
   LoginUserContext,
   LoginUserContextType,
-} from "../providers/LoginUserProvider";
+} from "../hooks/LoginUserProvider";
 
 export const useLoginUser = (): LoginUserContextType =>
   useContext(LoginUserContext);

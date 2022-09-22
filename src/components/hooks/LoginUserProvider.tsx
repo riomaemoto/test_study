@@ -5,7 +5,7 @@ import {
   SetStateAction,
   useState,
 } from "react";
-import { User } from "../types/User";
+import { User } from "./user";
 
 type LoginUser = User & { isAdmin: boolean };
 
