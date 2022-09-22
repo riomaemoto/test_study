@@ -1,6 +1,7 @@
-import { Box, Flex, Heading, Link } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link, useDisclosure } from "@chakra-ui/react";
 import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import { MenuIconButton } from "../../atoms/MenuIconButton";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -10,6 +11,8 @@ export const Header = () => {
     []
   );
   const onClickSetting = useCallback(() => navigate("/home/setting"), []);
+  const { onOpen, onClose, isOpen } = useDisclosure();
+
   return (
     <>
       <Flex
@@ -43,6 +46,13 @@ export const Header = () => {
           <Link onClick={onClickSetting}>設定</Link>
         </Flex>
         <MenuIconButton onOpen={onOpen} />
+        <MenuDrawer
+          onClose={onClose}
+          isOpen={isOpen}
+          onClickHome={onClickHome}
+          onClickUserManagement={onClickUserManagement}
+          onClickSetting={onClickSetting}
+        />
       </Flex>
     </>
   );
