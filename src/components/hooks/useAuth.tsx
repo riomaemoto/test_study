@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { User } from "../types/User";
+import { User } from "./user";
 import { useLoginUser } from "./useLoginUser";
 import { useMessage } from "./useMessage";
 
