@@ -1,6 +1,6 @@
 import { VFC, memo } from "react";
 import { Route, Routes } from "react-router-dom";
-import { HeaderLayout } from "../components/organisms/template/HeaderLayout";
+import { HeaderLayout } from "../components/Layout/HeaderLayout";
 import { Login } from "../components/pages/login";
 import { Links } from "./links";
 
