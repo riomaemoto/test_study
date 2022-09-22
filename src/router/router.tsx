@@ -1,5 +1,6 @@
 import { VFC, memo } from "react";
 import { Route, Routes } from "react-router-dom";
+import { HeaderLayout } from "../components/organisms/template/HeaderLayout";
 import { Login } from "../components/pages/login";
 import { Links } from "./links";
 
@@ -17,7 +18,7 @@ export const Router: VFC = memo(() => {
               />
             );
           })}
-          <Route path="*" element={<Page404 />} />
+          {/* <Route path="*" element={<Page404 />} /> */}
         </Route>
       </Routes>
     </>
