@@ -1,18 +1,23 @@
 import { VFC, memo } from "react";
 import { Route, Routes } from "react-router-dom";
+import { Login } from "../components/pages/login";
 import { Links } from "./links";
 
 export const Router: VFC = memo(() => {
   return (
     <>
       <Routes>
-        <Route path={Links[0].path} element={Links[0].element} />
-        <Route path="/home">
+        <Route path="/" element={<Login />}>
           {Links.map((item) => {
             return (
-              <Route key={item.path} path={item.path} element={item.element} />
+              <Route
+                key={item.path}
+                path={item.path}
+                element={<HeaderLayout>{item.element}</HeaderLayout>}
+              />
             );
           })}
+          <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
     </>
