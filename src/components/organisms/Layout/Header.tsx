@@ -1,10 +1,15 @@
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link } from "@chakra-ui/react";
 import React, { useCallback } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const navigate = useNavigate();
   const onClickHome = useCallback(() => navigate("/home"), []);
+  const onClickUserManagement = useCallback(
+    () => navigate("/home/user_management"),
+    []
+  );
+  const onClickSetting = useCallback(() => navigate("/home/setting"), []);
   return (
     <>
       <Flex
